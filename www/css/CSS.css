@@ -1,9 +1,11 @@
 body{
-    background-color: darkorange;
-    color: whitesmoke;
+    
+    color: #3D6ABE;
 }
 
 h1{
+    color: #FAFAFA;
+    background-color: #F56B2A;
     text-align: center;
     text-decoration: underline;
 }
