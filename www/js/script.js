@@ -51,9 +51,15 @@ function Decoupage_(TableauAnnonce) {
     }
 }
 
+function Affichage_(Tableau2dim) {
+    for (var i = 1; i < (Tableau2dim[0]).length; i++) {
+        console.log("n° : " + i  + " Titre : " + Tableau2dim[0][i - 1] + " Categorie : " + Tableau2dim[1][i - 1] + " Prix :" + Tableau2dim[2][i-1] + " Localisation : " + Tableau2dim[3][i-1] );
+    }
 
-$.get( /*'https://allorigins.me/get?method=raw&url=' + encodeURIComponent('https://www.leboncoin.fr/annonces/offres/midi_pyrenees/') + '&callback=?'*/
-    'http://127.0.0.1:62013/pageLeboncoin.html',
+}
+
+$.get( 'https://allorigins.me/get?method=raw&url=' + encodeURIComponent('https://www.leboncoin.fr/annonces/offres/midi_pyrenees/') + '&callback=?'
+    /*'http://127.0.0.1:59967/pageLeboncoin.html'*/,
     function (data) {
         var Offres = []; //tableau de tableau : 0 : Titre ; 1 : Categorie
         var divOffre = data.split('<li itemscope itemtype="http://schema.org/Offer">');
@@ -62,7 +68,6 @@ $.get( /*'https://allorigins.me/get?method=raw&url=' + encodeURIComponent('https
         Offres = Decoupage_(divOffre);
         if (Offres != false){
             Affichage_(Offres);
-            AffichageHTML (Offres);
         }else{
             alert("Erreur");
         }
