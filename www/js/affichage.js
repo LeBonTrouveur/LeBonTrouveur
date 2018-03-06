@@ -2,7 +2,7 @@ function AffichageHTML(Informations) {
     var Taille = Informations.length;
 
     for (var i = 1; i < Informations[0].length; i++) {
-        // crée un nouvel élément div 
+        // crée un nouvel élément div
         var newDiv = document.createElement("div");
         // Création du  contenu  :
         var texte = "Titre : " + Informations[0][i]  + " Categorie : " + Informations[1][i] + " Prix : " + Informations[2][i] + " €" ;
@@ -10,7 +10,7 @@ function AffichageHTML(Informations) {
         // ajoute le noeud texte au nouveau div créé
         newDiv.appendChild(newContent);
 
-        // ajoute le nouvel élément créé et son contenu dans le DOM 
+        // ajoute le nouvel élément créé et son contenu dans le DOM
         var currentDiv = document.getElementById("Resultats");
         document.body.insertBefore(newDiv, currentDiv);
 
