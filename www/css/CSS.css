@@ -1,0 +1,13 @@
+body{
+    background-color: darkorange;
+    color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    text-align: justify;
+}
